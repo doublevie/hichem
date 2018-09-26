@@ -1,0 +1,402 @@
+##	tous les examens suivants peuvent être pratiqués dans l’abcès du poumon sauf un :
+&&	hémocultures répétées à chaque pic de fièvre
+&&	échographie thoracique pour guider la ponction aspiration
+&&	la fibroscopie bronchique
+&&	le scanner thoracique
+##	une des caractéristiques clinique suivantes fait penser à la DDB :
+&&	bronchorrhée purulent surtout hivernale
+&&	dyspnée d’effort
+&&	infections parenchymateuses récidivantes de même siège
+&&	syndrome pleurétique la compliquant ou la révélant
+##	le traitement de DDB est :
+&&	médical seulement
+&&	médico-chirurgical d'emblée
+&&	chirurgical si la DDB est localisée
+&&	chirurgical si l’hémoptysie dans la DDB est récidivante après embolisation
+##	parmi les propositions propositions suivantes une ne fait pas parti du syndrome de DEMON- MEIGS laquell&&
+&&	Pleurésie avec taux de protéine pleurales est Sup >30 g/1
+&&	Ascite
+&&	Tumeur ovarienne
+&&	Douleurs pelviennes
+##	dans la P.S.F Tuberculeuse la bascilloscopie est :
+&&	positive en général dans l’expectoration
+&&	nécessaire à rechercher dans les urines et le LCR.
+&&	dans le liquide pleurai rarement positive au ZIEHL-NELSON
+&&	généralement positive dans le liquide pleural à l’examen direct
+##	parmi les propositions suivantes des syndromes paranéoplasique, une a une origine neurologique autoimmune, laquelle :
+&&	syndrome de Schawrtz-Barter
+&&	pseudo-myasthénie ou syndrome de LAMBERT- EATON
+&&	Acanthosis nigricans cutané
+&&	Gynécomastie
+##	dans le cas d’une forte suspicion d’une TBC pulmonaire chronique quelle serait votre conduite
+&&	demander des BK avec antibiogramme
+&&	commencer un ttt de 3cmi ligne dans un service spécialisé de pneumo
+&&	faire une recherche de BK avec test de sensibilité (antibiogramme) et commencer un ttt de 2eme ligne en ambulatoire
+
+&&	demande des 03 BK avec antibiogramme et commencer un ttt DE 3eme ligne
+##	le BCG obligatoire à la naissance en Algérie est un vaccin qui a les caractéristiques suivantes :
+&&	mycobactérium bovis vivant atténué.
+&&	mycobactérium luberculosis hominis mort.
+&&	obtenu par repiquages successifs d’ADP bovis pendant des années.
+&&	Evite la TBC pulmonaire à 100%.
+A(ac)	B(bd)	C(ad)	d(bc)
+##	l’immunité anti-TBC acquise ou immunité de surinfection se caractérise :
+&&	Immunité humoral&&
+&&	Peut être transmise passivement à l’individu.
+&&	pour vecteur principal le macrophage alvéolair&&
+&&	Est illustrée par le phénomène de coch.
+A(ac)	B(bc)	C(cd)	D(ad)
+##	dans les pneumopathies communautaires quelles sont les indices de gravités nécessitant .'hospitalisation :
+&&	présence de comorbidité
+&&	hyperleucocytose > 30.000 c- FR à 20 cycles/mn
+&&	infiltration parenchymateuse bilatérale à la Rx
+&&	infection à streptoeoccus pneumonaire
+A(ade)	B(bcd)	C(cde)	D(abd)
+##	au cours d’une pneumopathie à mycoplasma pneumiae le Dgc biologique peut être posé usuellement par :
+&&	L’ECB de l'expectoration
+&&	Hémoculture
+&&	Dosage des IgM spécifiques ou agglutinines froides
+&&	L’antigénurie
+##	au cours du KC bronchique primitif quel est le signe de grande sévérité pronostique :
+&&	hémoptysies de petite abondance
+&&	toux et expectoration mecopurulente
+&&	hippocratisme digital
+&&	voie bitonale
+##	quel est le signe qui n’appartient pas au syndrome de Pancoast Tobias :
+&&	lyse costale
+&&	myosis-ptosis-inophtalmie
+&&	myasthéni&&
+&&	radiculalgie scapuiaire
+##	le premier geste de savetage au cours d’une hémophtysie de grande abondance est :
+&&	La libération des voies aériennes par fïbro- aspiration
+&&	perfusion de macromolécules
+&&	Embolisation
+&&	Dicynone ® en 1VL
+##	lequel parmi les médicaments suivants, celui qui n’a pas une indication dans l’œdème aigue du
+
+poumon.
+&&	Digitalique
+&&	furosémide
+&&	Veino-dilatatcurs
+&&	Corticoïde
+&&	AnticoaguSation
+##	dans le poumon cardiaque au stade d’œdème péribronchovasculaire, la pression hydrostatique capillaire est :
+&&	Intérieure a 10 mmhg
+&&	Entre 10 et 15 mmhg
+&&	Entre 15 et 20 mmhg
+&&	Entre 20 et 25 mmhg
+&&	Supérieur à 25 mmhg
+##	dans la forme typique de l’OAP, l’auscultation trouve :
+&&	Un stridor inspiratoire
+&&	Souffle tubaire
+&&	Un Wheezing
+&&	Des râles crépitant
+&&	Un frottement pleural
+##	chez un malade présentant une pleurésie hémorragique abondante et douloureuse, le diagnostique de mésothéliome peut être suspecté si :
+&&	Exposition à l’amiant&&
+&&	Aspect festonné de la plèvre
+&&	Siégé à gauche
+&&	Taux d'amylopieurie est élevé
+&&	Associée à une péricardite (polysérite)
+##	Au cour d’une pleurésie purulente avec d’une antibiothérapie préalable insuffisante :
+&&	le lièvre est élevé&&
+&&	les signes respiratoires d’appel sont moins nets.
+&&	L'examen bactériologique est le plus souvent positi&&
+&&	La ponction met en évidence un liquide habituellement louch&&
+&&	Fétidité de l’épanchement.
+##	Parmi les maladies suivantes, lesquelles Peuvent être à l’origine de (a fibrose pulmonaire ?
+&&	BPCO
+&&	Pneumoconioses
+&&	Pneumopathies d’hypersensibilité
+&&	Asthme
+&&	Connectivités
+##	Un pneumothorax est mal supporté si :
+&&	il survient chez un adulte jeune
+&&	il s'agit d’une récidive
+&&	il s’agit d'un pneumothorax à secondaire
+&&	il s’agit d’un pneumothorax à soupape
+&&	¡1 s’agit d‘un pneumothorax iatrogène
+
+##	quelle est l’étiologie la plus fréquente des pleurésies hémorragiques :
+&&	Cancer secondaire
+&&	Tuberculose
+&&	Mésothéliome
+&&	Pancréatite
+##	Quels sont parmi ces particularités du liquide pleural, celles que vous retenez en faveur d’une pleurésie purulente ?
+&&	Pauvre en protéines (< à 30 g/##
+&&	PH inférieur à 7.20
+&&	Prédominance de polynucléaires altérés
+&&	Prédominance de lymphocytes
+##	parmi les images radiologiques suivantes, laquelle est (ou lesquelles sont) évocatrice(s) d’un cancer pulmonaire secondaire ?
+&&	Foyer rond périphérique
+&&	Foyer parenchymateux excavé
+&&	Atélectasie
+&&	Lâcher de ballons Lymphangite sarcomateuse
+##	le cancer bronchique primitif peut être à l'origine de nombreux syndromes paranéoplasiques il peut s’agir de :
+&&	Syndrome de Claude-Bemard-Horner.
+&&	Syndrome de Cushing.
+&&	Syndrome de Pankoast-Tobbias.
+&&	Ostdorathropalhie hypertrophiaiUepn eumique OAHP.
+A(a,d)	B(b,c)	C(d,c)	D(b,d)
+##	l’allergie ou hypersensibilité tuberculeuse a les caractères suivants :
+&&	responsable de l’action pathogène du bacille
+&&	Son apparition nécessite une période de latence ou phase antiallergique
+&&	protège contre la tuberculose
+&&	Mise en évidence par l’IDR à la tuberculine
+A(b,c)	B(a,b,d)	C(a,c)	D(b,c,d)
+##	la pneumopathie à Klebsiellapneumoniae est caractérisée par :
+&&	Son évolution le plus souvent bénigne
+&&	Evolution rapide vers la nécrose
+&&	Son aspect radiologique bombant fa scuissure
+&&	Réponse favorable aux b lactamines seules
+A(b,c)	B(a,b)	C(c,d)	D(a,d)
+##	Chez un sujet âge tabagique ans antécédents pulmonaire, des hémoptysies repérées sans queue seraient évocatrices de :
+&&	Cancer broncbiqucpueprimitif
+&&	Tuberculose pulmonaire
+&&	Aspergillomebronchique
+&&	DDB
+##	parmi les propositions suivantes quelle est celle qui n’appartient pas à la silicose :
+
+&&	Histoire professionnelle en milieu empoussiéré.
+&&	Opacité radiologique selon la classification BTT.
+&&	Recherche négative de BK.
+&&	Un début de prise en charge > 5ans.
+##	la définition Du trouble ventilatoire obstructif au cours de la BPCO repose sur :
+a- VEMS diminué à 70% . b- VEMS /CV inf 70% c- VEMS <80% d- VEMS/VEM6 < 70
+##	Au cours de la BPCO la TDM Thoracique permet do :
+&&	confirmer le diagnostic positif
+&&	révéler des complications
+&&	localiser des maladies associées
+&&	retrouver des facteurs de risque
+##	quel est le type d’emphysème le plus fréquemment retrouve
+&&	L’emphysème panlobulaire
+&&	L’emphysème centreolubulaire
+&&	L’emphysème paracicatriciel
+&&	L’emphysème paraseptal
+##	au cours de l’emphysème panlobulaire :
+&&	La distension thoracique est importent
+&&	La distension thoracique est modérée
+&&	La cardiomégalie est précoce
+&&	La cardiomégalie est tardive
+&&	La notion de tabagisme actif est fréquente
+##	le diagnostic étiologique de la miliaire tuberculose Repose sur :
+&&	l’aspect radiologique
+&&	La mise en évidence de BR
+&&	les données cliniques
+&&	les antécédents de carcinose
+&&	la positivité du quantiferon
+##	l'OLD trouve son indication nu cour de L’IRCO si :
+&&	échec du traitement optimal pendant 30 jours
+&&	le rapport VEMS/CVF< 70%
+&&	PaC02 >55 mmhg
+&&	Pa02 < 55mmhg
+##	une patente présentant une tuberculose pulmonaire déjà trait pendant 25 jours et qui présente des BK positifs dans les crachats, Quelle sont les médicaments à prescrire de nouveau :
+&&	rifamicine
+&&	isoniazide
+&&	pyrazinamid
+&&	ethambuiol
+&&	streptomycine
+
+##	patente âgée de 55 ans présentent une tuberculose pulmonaire il bacillocqople négative mis sous traitement de l،re ligne pendant 6 mois ce patient peut être déclare guéri si :
+&&	les B K sont négatifs au 05eme mois
+&&	les BK sont négatifs au 06eme mois
+&&	Absence de signes clinique a la fin du traitement
+&&	Absence de signes radiologique a la fin du traitement
+##	l’hospitalisation s’impose dans la prise en charge de la TBC si :
+&&	Effets secondaires
+&&	Echec thérapeutique
+&&	Forme compliquée
+&&	Insuffisance hépatique
+##	chez un patient de 20 ans présentant une PSF, la forte présomption tuberculeuse est suspectée devant les éléments suivants :
+&&	l’étude cytologique du LP montre une exclusion lymphocytair&&
+&&	IDR 15 mn sans cicatricevaccinale
+&&	notion d’érytluhéme noueux il y a 6mois.
+&&	glycopleurie et pH élevés
+A(a,d,c)	B(a,b,c)	C(a,c)	D(a,b)
+##	une jeune femme myasthénique avec anémie erythroblastique d’apparition récente présente sur le telethorax un élargissement du médiastin antérieur, quelle en est l'affection responsable :
+&&	Tumeurneurogéne
+&&	Adenopaihiesmédiatinales
+&&	Thymome
+&&	KH médiaslinel
+##	Quel est le diagnostic le plus probable :
+&&	PNO spontané
+&&	Pleurésie de moyenne abondance
+&&	pleuropneumopathie droite
+&&	embolie pulmonaire
+##	Quelle est votre attitude thérapeutique en urgence :
+&&	drainage transthoracique
+&&	exsufflation a l’aiguille
+&&	repos strict au lit seul
+&&	oxygénothérapie
+##	A l’ssue du traitement d’urgence, une fois le malade guéri quel examen complémentaire vous parait indispensable ? Que lui conseillerez- vous ?
+&&	Recherche des D-Dimères
+&&	Tomodensitomètre thoracique TDM
+&&	Arrêt du tabagisme
+&&	Eviter la plongée sous marine
+##	En cas de récidive controlatérale quelle sera votre attitude thérapeutique :
+&&	Kinésithérapie respiratoire
+
+&&	traitement antibacillaire
+&&	symphyse pleurale médicale ou chirurgicale
+&&	oxygénothérapie (old) a domicile
+##	patient de 50 ans vétérinaire de profession en très bon état général, sans ATCD pulmonaire se présente en consultation de pneumologie pour hémoptysie de petite abondance avec expectoration aqueuse inhabituelle d’apparition récente, quel est le Dgc te plus probable :
+&&	bronchite aigue
+&&	pneumopathie aigue
+&&	kyste hydatique
+&&	cancer bronchique
+##	selon l’anamnèse et l’évolution clinique l’image radiologique serait :
+&&	opacité d'allure pneumonique
+&&	image hydro-aérique à niveau sup ondulé
+&&	image cavitaire
+&&	image miliaire localisée
+##	Quel est l’examen complémentaire qui assure du Dgc :
+&&	Immunoélectrophorèse
+&&	FNS complète
+&&	ECB de l’expectoration
+&&	Bacilloscopie
+##	parmi les examens d’imagerie suivantes quelles est celle qui apporte le plus d’élément pour guider le traitement :
+&&	Télé thorax
+&&	TDM thoracique
+&&	L’IRM pulmonaire
+&&	L’échographie thoracique
+##	En regard de tous ce qui précède quelle sera votre attitude thérapeutique :
+&&	Chirurgicale
+&&	Médicale
+&&	Abstention thérapeutique avec contrôle
+&&	Symptomatique (hémostatique)
+
+Examen du 08/03/2018
+Module de Pneuma-phtisioiogie Sujet de bactériologie Rotation 3 (2017-##
+##	Mycobacterium tubercuiosis :
+&&	Est résistant aux rayons UV.
+&&	Est résistant au froi&&
+&&	Est résistant à l'eau de javel.
+&&	Est sensible à la dessiccation.
+&&	Toutes ces propositions sont justes.
+##	M.bovis :
+&&	Donne des colonies en "chou-fleur" sur milieu de Lowenstein Jensen.
+&&	Son délai de culture est de 20 à 40 jours.
+&&	Cultive sur Lowenstein Jensen incorporé de TCH.
+&&	Est transmis à l’homme surtout par voie aérienn&&
+&&	Possède une C3taiase thermorésistant&&
+##	Quelle est fa proposition juste ?
+&&	Le milieu de coletsos favorise la culture de M.tubercuiosis et de M.africanum.
+&&	La décontamination du LCR est obligatoire avant sa mise en cultur&&
+&&	L'incubation des Lowenstein Jensen se fait à 30.&&
+&&	Le test de sensibilité aux antituberculeux est réalisé systématiquement pour toute souche de BK isolé&&
+&&	La culture de M.africanum sur Lowenstein Jensen donne des colonies rugeuses.
+##	Quelle est la proposition juste ?
+&&	A la bacilloscopie, la présence de 10 à 99 BAAR/ch3mps microscopique indique que la lame est faiblement positiv&&
+&&	Dans le diagnostic bactériologique de la tuberculose l’examen direct est plus sensible que la cultur&&
+&&	Les prélèvements destinés au diagnostic bactériologique de la tuberculose peuvent être conservés à+4°C jusqu'à 15 jours.
+&&	Mycobacterium bovis ne cultive pas sur Lowenstein Jensen.
+&&	La lecture de l'examen microscopique après coloration à l'auramine se fait au microscope à fluorescence à l'objectif X 40.
+##	Mycobacterium tuberculosis:
+&&	Est une bactérie à croissance rapide,
+&&	Est anaérobie strict.
+&&	Est pathogène chez les bovins,
+&&	Est un bacille à Gram négati&&
+&&	Sa paroi est riche en acides mycoliques.
+##	Chez un patient présentant un syndrome respiratoire aigu sous forme d'une pneumopathie systématisée, le diagnostic microbiologique de pneumopathie à Haemophilus influemae se fait systématiquement par :
+&&	La sérologi&&
+&&	La recherche des antigènes solubles.
+&&	La mise en évidence des coccobacilies à Gram négatif à l'examen direct.
+
+&&	La culture cellulair&&
+&&	La sensibilité à l'optochin&&
+A(a,b,e)	B(b,d)	C(b,c)	D(c,e)	E(a,b)
+##	Concernant la pneumopathie à Légionella pneumophila sérotype 1, quelles sont les propositions
+justes ?
+&&	Le diagnostic rapide se fait par la recherche des antigènes solubles dans les urines.
+&&	Elle réalise un tableau de pneumopathie atypiqu&&
+&&	C'est une maladie à déclaration obligatoir&&
+&&	L'agent pathogène est un cocci à Gram positi&&
+&&	Elle est fréquente chez le nourrisson.
+A (a,b,e)	B (b,c,d)	C(a,b,c)	D (a,c,e)	E (a,b,d)
+##	M.Xenopi:
+&&	Est un bacille à Gram négatif intracellulaire facultati&&
+&&	Possède une catalase thermostabl&&
+&&	Peut infecter l'homme et l'animal.
+&&	Sa paroi est très riche en acides mycoliques.
+&&	Son délai de culture est de 5 à7 jours.
+A (b,d,e)	B (a,b,c)	C(b,c,d)	D	(d,e)	E (c,d)
+##	La classification de Runyon des mycobactéries atypiques est basée sur :
+&&	L'aspect des colonies.
+&&	La vitesse de croissanc&&
+&&	Le niacine test.
+&&	Le pouvoir pathogèn&&
+&&	La pigmentation des colonies.
+A (a,c,d)	B (c,d,e)	C (a,b,e)	D	(a,c,e)	E (b,e)
+##	Dans l'examen cytobactériologique des aspirations bronchiques :
+&&	Les polynucléaires sont nombreux.
+&&	Les cellules épithéliales sont < 10/champ.
+&&	Culture : flore monomorphe > 107 UFC/ml.
+&&	Les PNN sont > 25/champ.
+&&	Culture : flore monomorphe > 105UFC/mi.
+A (a,b,c)	B(c,d,)	C (a,b,e)
+E (b,c,d)
+D (b,d,)
+
+Questions Anapath Contrôle Pneumologie 3— rotation
+Codiez les bonnes réponses
+##	Dans la bronchectasie on peut trouver au niveau des bronches :
+&&	Des aspects polypoides endobronchiques.
+&&	Un œdème du chorion.
+&&	Une hypertrophie des glandes muqueuses.
+&&	Des foyers nécrotiques.
+&&	Des foyers hémorragiques.
+##	Dans L’emphysème pulmonaire on objective :
+&&	Une disparition de la paroi alvéolair&&
+&&	Un amincissement de la paroi alvéolair&&
+&&	Un aspect lardacé du poumon.
+&&	Une production exagérée des fibres élastiques.
+&&	Des bulles qui bombent sous la plèvre viscéral&&
+##	Bans La bronchite chronique on retrouve :
+&&	Une augmentation du nombre des cellules mucïpares.
+&&	Une atrophie des glandes muqueuses.
+&&	Une métaplasie malpighienne de la muqueus&&
+&&	Une métaplasie cartilagineuse du chorion.
+&&	Un épaississement de la membrane basai&&
+##	Dans le follicule épithelio-giganto-cellulaire on peut trouver :
+&&	Des cellules géantes de type Muller (à corps étranger).
+&&	Des cellules géantes de type Langhans.
+&&	Des cellules géantes tumorales.
+&&	Une couronne lymphocytair&&
+&&	Des cellules épithéloïdes.
+##	Le nécrose- caséeuse apparaît au microscope optique comme :
+&&	Une substance éosinophile, homogèn&&
+&&	Une substance finement granuleus&&
+&&	Une substance anhiste, acelluiair&&
+&&	Une substance basophile, hétérogène
+&&	Une substance brunâtre, tatouée d’anthracose
+##	Le papillonne bronchique :
+&&	Est bordé par un épithélium qui présente des caractères de carcinome dans toute son épaisseur.
+&&	Forme une masse en choux fleur dans la lumière bronchiqu&&
+&&	Est constitué d'axes conjonctivo-vasculaire souvent inflammatoires.
+&&	Se développe à partir des glandes muqueuses des bronches.
+&&	Est solitaire ou multipl&&
+##	L’Adénome bronchique :
+&&	Ne présente jamais des remaniements kystiques.
+&&	Présente plusieurs sous type histoiogiqu&&
+&&	Se présente comme une lésion isolée et bien limité&&
+&&	Se présente comme une lésion ronde ou ovalair&&
+&&	Présente un épithélium de surface de type malpighien parfois kératinisé.
+
+##	L’adénocarcinome insitu bronchique :
+&&	Se présente histologiquement comme une lésion lépidique pur&&
+&&	Exprime fortement le P53.
+&&	Présente une invasion stromale et vasculair&&
+&&	Se caractérise par des cloisons tapissées par des cellules qui présentent des atypies modérés.
+&&	Est à l’origine des tumeurs carcinoïdes.
+##	Le carcinome épidermoide broncho-pulmonaire :
+&&	Se présente comme une volumineuse masse friable et nécrotiqu&&
+&&	Est fait de cellules monomorphes à noyaux vésicuieux.
+&&	Se présente comme une lésion excavée très bien limité&&
+&&	Est fait de travées de cellules a différenciation épidermoid&&
+&&	Présente un stroma inflammatoir&&
+##	Le carcinome non a petites cellules du poumon(CNPC) :
+&&	Se présente comme une volumineuse masse, blanchâtre avec des dépôts d’anthracos&&
+&&	Est fait de grandes cellules atypiques a noyau vésicuieux et nuciéolé.
+&&	Présente plusieurs variantes histologiques.
+&&	Est caractérisé par un aspect en poivre sel de ses noyaux.
+&&	Doit renfermer au moins 10% de cellules géantes.
