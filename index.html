@@ -56,6 +56,21 @@
 
 
               <div class="form-group">
+                <select class="form-select " id="year">
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+
+                </select>
+              </div>
+
+              <div class="form-group">
                 <select class="form-select " id="qType">
                   <option value="0">Questions</option>
                   <option value="1">1 -(ou) 1-/</option>
@@ -86,7 +101,9 @@
                 </select>
               </div>
 
+<div id="resAlert">
 
+</div>
 
             </div>
             <div class="card-footer">
@@ -111,7 +128,8 @@
 const qField = document.getElementById('qfield') ,
  reponseField = document.getElementById('reponsefield') ,
 qType = document.getElementById('qType') ,
-choicesType = document.getElementById('qType') ,
+choicesType = document.getElementById('choicesType') ,
+resAlert = document.getElementById('resAlert') ,
 regQUestions = [
   null ,
   /[0-9*]+(\s?)+\-/gi,
@@ -169,26 +187,39 @@ console.log(regQUestions[pos]);
 
 
 function submit(){
-  let qc = sdash(qField.value).split('##') , qWc = [];
+  let fs = firstSplit(qField.value)
+// console.log('first split '+fs.length);
 
+for (var i = 0; i < fs.length; i++) {
+let qsss =   secondSplit(fs[i])
+console.log(qsss);
+}
+
+}
+
+
+
+
+function firstSplit(x){
+  let qc = sdash(x).split('##') , qWc = [];
   if (qc && qc .length) {
 for (var i = 0; i < qc.length; i++) {
-  console.log(qc[i].length);
 if (qc[i].length >= 20)  qWc.push(qc[i])
 }
   }
-  console.log(qWc);
   return qWc;
-
 }
 
- 
 
+function secondSplit(r){
+  let pos = parseInt(choicesType.value);
 
-
-
-
-
+  let questAndch = r.toString().replace(regChoices[pos], ';;').split(';;'),qWc = [];;
+for (var i = 0; i < questAndch.length; i++) {
+  qWc.push(questAndch[i]);
+}
+ return qWc;
+}
 
 
 
@@ -207,37 +238,39 @@ function choix(d) {
 
 
 
-qField.value = ` Question 1  tous les examens suivants peuvent
-être pratiqués dans l’abcès du poumon sauf
-un :
-a. hémocultures répétées à chaque pic de
-fièvre
-b. échographie thoracique pour guider l
-ponction aspiration
-c. la fibroscopie bronchique
-d. le scanner thoracique
+qField.value = `
+Q1:	tous les examens suivants peuvent être pratiqués dans l’abcès du poumon sauf un :
+a.	hémocultures répétées à chaque pic de fièvre
+b.	échographie thoracique pour guider la ponction aspiration
+c.	la fibroscopie bronchique
+d.	le scanner thoracique
+Q 2:	une des caractéristiques clinique suivantes fait penser à la DDB :
+a.	bronchorrhée purulent surtout hivernale
+b.	dyspnée d’effort
+c.	infections parenchymateuses récidivantes de même siège
+d.	syndrome pleurétique la compliquant ou la révélant
+Q3:	le traitement de DDB est :
+a.	médical seulement
+b.	médico-chirurgical d'emblée
+c.	chirurgical si la DDB est localisée
+d.	chirurgical si l’hémoptysie dans la DDB est récidivante après embolisation
+Q4:	parmi les propositions propositions suivantes une ne fait pas parti du syndrome de DEMON- MEIGS laquelle.
+a.	Pleurésie avec taux de protéine pleurales est Sup >30 g/1
+b.	Ascite
+c.	Tumeur ovarienne
+d.	Douleurs pelviennes
+Q5:	dans la P.S.F Tuberculeuse la bascilloscopie est :
+a.	positive en général dans l’expectoration
+b.	nécessaire à rechercher dans les urines et le LCR.
+c.	dans le liquide pleurai rarement positive au ZIEHL-NELSON
+d.	généralement positive dans le liquide pleural à l’examen direct
+Q6:	parmi les propositions suivantes des syndromes paranéoplasique, une a une origine neurologique autoimmune, laquelle :
+a.	syndrome de Schawrtz-Barter
+b.	pseudo-myasthénie ou syndrome de LAMBERT- EATON
+c.	Acanthosis nigricans cutané
+d.	Gynécomastie
 
 
-Question 2  tous les examens suivants peuvent
-être pratiqués dans l’abcès du poumon sauf
-un :
-a. hémocultures répétées à chaque pic de
-fièvre
-b. échographie thoracique pour guider la
-ponction aspiration
-c. la fibroscopie bronchique
-d. le scanner thoracique
-
-
-Q5 tous les examens suivants peuvent
-être pratiqués dans l’abcès du poumon sauf
-un :
-a. hémocultures répétées à chaque pic de
-fièvre
-b. échographie thoracique pour guider la
-ponction aspiration
-c. la fibroscopie bronchique
-d. le scanner thoracique
 
 `;
 
