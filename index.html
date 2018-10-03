@@ -58,26 +58,19 @@
               <div class="form-group">
                 <select class="form-select " id="qType">
                   <option value="0">Questions</option>
-                  <option value="1">1- iiiiiiiiiiii</option>
-                  <option value="2">1. iiiiiiiiiiii</option>
-                  <option value="3">1 :iiiiiiiiiiii</option>
-                  <option value="4">1) iiiiiiiiiiiiiii</option>
-                  <option value="5">1/ iiiiiiiiiiiiiiiiiiiii</option>
-                  <option value="6">1/iiiiiiiiiiiiiiiiii</option>
-                  <option value="7">1/iiiiiiiiiiiiiiiiii</option>
-                  <option value="8">1) iiiiiiiiiiiiiiiiiii</option>
-                  <option value="9">Q1iiiiiiiiiiiiiiiiiii</option>
-                  <option value="10">Q1 :iiiiiiiiiiiiiiiiii</option>
+                  <option value="1">1 -(ou) 1-/</option>
+                  <option value="2">1 )(ou) 1)/</option>
+                  <option value="3">1 :(ou) 1:/</option>
+                  <option value="4">Q1  </option>
+                  <option value="5">Q1 : </option>
+                  <option value="5">Q1 - </option>
+                  <option value="5">Q1 ) </option>
 
-                  <option value="11">01/ iiiiiiiiiiiiiii</option>
-                  <option value="12">01/ -iiiiiiiiiiiiiiiiiii</option>
-                  <option value="13">Ql: iiiiiiiiiiiiiiii</option>
-                  <option value="14">Ql-iiiiiiiiiiiiiiiii</option>
-                  <option value="15">Question 1 :iiiiiiiiiiiiiiiii</option>
-                  <!-- <option value="16">Question 01 :iiiiiiiiiiiiiiii</option>
-                  <option value="17">Question 01 :iiiiiiiiiiiiiiii</option> -->
 
-                  <option value="18">QCM 1 :iiiiiiiiiiiiiii</option>
+
+
+                  <option value="3">Question1  (ou) Question 1: (ou) </option>
+                  <option value="4">QCM 1 (ou) QCM 1 :</option>
                 </select>
               </div>
 
@@ -85,12 +78,11 @@
               <div class="form-group">
                 <select class="form-select" id="choicesType">
                   <option value="0">Propositions</option>
-                  <option value="1">A.	proposition</option>
-                  <option value="2">a.	proposition</option>
-                  <option value="3">a.proposition</option>
-                  <option value="4">A-proposition</option>
-                  <option value="5">A) proposition</option>
-                  <option value="6">a) proposition</option>
+                  <option value="1">A.</option>
+                  <option value="2">a.</option>
+                  <option value="3">A-proposition</option>
+                  <option value="4">A) proposition</option>
+                  <option value="5">a) proposition</option>
                 </select>
               </div>
 
@@ -121,7 +113,21 @@ const qField = document.getElementById('qfield') ,
 qType = document.getElementById('qType') ,
 choicesType = document.getElementById('qType') ,
 regQUestions = [
-  /[0-9*]+(\s?)+(\.?)+(\-?)+(\:?)+(\s?)+/gi,
+  null ,
+  /[0-9*]+(\s?)+\-/gi,
+  /[0-9*]+(\s?)+\)/gi,
+  /[0-9*]+(\s?)+\:/gi,
+  /[Q]+[0-9*]+(\s?)/gi,
+  /[Q]+(\s?)+[0-9*]+(\s?)+\:/gi,
+  /[Q]+[0-9*]+(\s?)+\-/gi,
+  /[Q]+[0-9*]+(\s?)+\)/gi,
+
+
+  /[0-9*]+(\)?)+(\s?)+(\.?)+(\-?)+(\:?)+(\/?)+(\s?)/gi,
+  /[Q]+[0-9*]+(\s?)+(\)?)+(\:- )/gi,
+  /[Question]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,
+  /[QCM]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,
+/*
   /[0-9]+\-/gi ,
   /[0-9]+\./gi,
   /[0-9]+\s+\:/gi,
@@ -137,58 +143,53 @@ regQUestions = [
   /[0-9*]+\-+\s+\-/gi,
   /[Q]+[0-9*]+\:/gi,
   /[Q]+[0-9*]+\-/gi,
-  /[Question]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,
+  /[Question]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,*/
 
 ];
 
+const regChoices = [
+  null ,
+  /[A-G]+\.+(\s?)/gi,
+  /[a-g]+\.+(\s?)/gi,
+  /[A-G]+\-+(\s?)/gi,
+  /[A-G]+\)+(\s?)/gi,
+  /[a-g]+\)+(\s?)/gi,
+]
+
 
 function sdash(d) {
-let pos =0;
+let pos = parseInt(qType.value);
+console.log();
 console.log(regQUestions[pos]);
   return d.toString().replace(regQUestions[pos], '##');
 }
 
-qField.value = ` 2 - tous les examens suivants peuvent
-être pratiqués dans l’abcès du poumon sauf
-un :
-a. hémocultures répétées à chaque pic de
-fièvre
-b. échographie thoracique pour guider la
-ponction aspiration
-c. la fibroscopie bronchique
-d. le scanner thoracique
 
-
-Question2 3 . tous les examens suivants peuvent
-être pratiqués dans l’abcès du poumon sauf
-un :
-a. hémocultures répétées à chaque pic de
-fièvre
-b. échographie thoracique pour guider la
-ponction aspiration
-c. la fibroscopie bronchique
-d. le scanner thoracique
-
-
- 4 : tous les examens suivants peuvent
-être pratiqués dans l’abcès du poumon sauf
-un :
-a. hémocultures répétées à chaque pic de
-fièvre
-b. échographie thoracique pour guider la
-ponction aspiration
-c. la fibroscopie bronchique
-d. le scanner thoracique
-
-`;
 
 
 
 function submit(){
-  let qc = qField.value;
-  console.log(sdash(qc).split('##') );
+  let qc = sdash(qField.value).split('##') , qWc = [];
+
+  if (qc && qc .length) {
+for (var i = 0; i < qc.length; i++) {
+  console.log(qc[i].length);
+if (qc[i].length >= 20)  qWc.push(qc[i])
+}
+  }
+  console.log(qWc);
+  return qWc;
 
 }
+
+ 
+
+
+
+
+
+
+
 
 
 
@@ -202,6 +203,43 @@ function choix(d) {
 
 
 
+
+
+
+
+qField.value = ` Question 1  tous les examens suivants peuvent
+être pratiqués dans l’abcès du poumon sauf
+un :
+a. hémocultures répétées à chaque pic de
+fièvre
+b. échographie thoracique pour guider l
+ponction aspiration
+c. la fibroscopie bronchique
+d. le scanner thoracique
+
+
+Question 2  tous les examens suivants peuvent
+être pratiqués dans l’abcès du poumon sauf
+un :
+a. hémocultures répétées à chaque pic de
+fièvre
+b. échographie thoracique pour guider la
+ponction aspiration
+c. la fibroscopie bronchique
+d. le scanner thoracique
+
+
+Q5 tous les examens suivants peuvent
+être pratiqués dans l’abcès du poumon sauf
+un :
+a. hémocultures répétées à chaque pic de
+fièvre
+b. échographie thoracique pour guider la
+ponction aspiration
+c. la fibroscopie bronchique
+d. le scanner thoracique
+
+`;
 
 </script>
 
