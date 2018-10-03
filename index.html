@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="css/spectre.min.css">
+<link rel="stylesheet" href="css/spectre-exp.min.css">
+<style media="screen">
+  .card {margin-top: 3vh;height:94vh;}
+</style>
+    <title></title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="columns">
+        <div class="column col-6">
+
+          <div class="card">
+
+            <div class="card-header">
+              <div class="card-title h5">QUESTIONS</div>
+
+            </div>
+            <div class="card-body">
+
+
+              <div class="form-group">
+                <label class="form-label" for="qfield">Questions</label>
+                <textarea class="form-input" id="qfield" placeholder="COLLER" rows="6"></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reponsefield">Choix</label>
+                <textarea class="form-input" id="reponsefield" placeholder="COLLER" rows="6"></textarea>
+              </div>
+
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+          </div>
+
+
+        </div>
+        <div class="column col-6">
+
+          <div class="card">
+
+            <div class="card-header">
+              <div class="card-title h5">PARAMETRES</div>
+
+            </div>
+            <div class="card-body">
+
+
+              <div class="form-group">
+                <select class="form-select " id="qType">
+                  <option value="0">Questions</option>
+                  <option value="1">1- iiiiiiiiiiii</option>
+                  <option value="2">1. iiiiiiiiiiii</option>
+                  <option value="3">1 :iiiiiiiiiiii</option>
+                  <option value="4">1) iiiiiiiiiiiiiii</option>
+                  <option value="5">1/ iiiiiiiiiiiiiiiiiiiii</option>
+                  <option value="6">1/iiiiiiiiiiiiiiiiii</option>
+                  <option value="7">1/iiiiiiiiiiiiiiiiii</option>
+                  <option value="8">1) iiiiiiiiiiiiiiiiiii</option>
+                  <option value="9">Q1iiiiiiiiiiiiiiiiiii</option>
+                  <option value="10">Q1 :iiiiiiiiiiiiiiiiii</option>
+
+                  <option value="11">01/ iiiiiiiiiiiiiii</option>
+                  <option value="12">01/ -iiiiiiiiiiiiiiiiiii</option>
+                  <option value="13">Ql: iiiiiiiiiiiiiiii</option>
+                  <option value="14">Ql-iiiiiiiiiiiiiiiii</option>
+                  <option value="15">Question 1 :iiiiiiiiiiiiiiiii</option>
+                  <!-- <option value="16">Question 01 :iiiiiiiiiiiiiiii</option>
+                  <option value="17">Question 01 :iiiiiiiiiiiiiiii</option> -->
+
+                  <option value="18">QCM 1 :iiiiiiiiiiiiiii</option>
+                </select>
+              </div>
+
+
+              <div class="form-group">
+                <select class="form-select" id="choicesType">
+                  <option value="0">Propositions</option>
+                  <option value="1">A.	proposition</option>
+                  <option value="2">a.	proposition</option>
+                  <option value="3">a.proposition</option>
+                  <option value="4">A-proposition</option>
+                  <option value="5">A) proposition</option>
+                  <option value="6">a) proposition</option>
+                </select>
+              </div>
+
+
+
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-success" onclick="submit()">Ajouter</button>
+
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+<script type="text/javascript">
+
+const qField = document.getElementById('qfield') ,
+ reponseField = document.getElementById('reponsefield') ,
+qType = document.getElementById('qType') ,
+choicesType = document.getElementById('qType') ,
+regQUestions = [
+  /[0-9*]+(\s?)+(\.?)+(\-?)+(\:?)+(\s?)+/gi,
+  /[0-9]+\-/gi ,
+  /[0-9]+\./gi,
+  /[0-9]+\s+\:/gi,
+  /[0-9]+\)+\s/gi,
+  /[0-9]+\//gi,
+  /[0-9]+\//gi,
+  /[0-9]+\//gi,
+  /[0-9*]+\)/gi,
+  /[Q]+[0-9*]/gi,
+  /[0-9*]+\s+\:/gi,
+
+  /[0-9*]+\//gi,
+  /[0-9*]+\-+\s+\-/gi,
+  /[Q]+[0-9*]+\:/gi,
+  /[Q]+[0-9*]+\-/gi,
+  /[Question]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,
+
+];
+
+
+function sdash(d) {
+let pos =0;
+console.log(regQUestions[pos]);
+  return d.toString().replace(regQUestions[pos], '##');
+}
+
+qField.value = ` 2 - tous les examens suivants peuvent
+être pratiqués dans l’abcès du poumon sauf
+un :
+a. hémocultures répétées à chaque pic de
+fièvre
+b. échographie thoracique pour guider la
+ponction aspiration
+c. la fibroscopie bronchique
+d. le scanner thoracique
+
+
+Question2 3 . tous les examens suivants peuvent
+être pratiqués dans l’abcès du poumon sauf
+un :
+a. hémocultures répétées à chaque pic de
+fièvre
+b. échographie thoracique pour guider la
+ponction aspiration
+c. la fibroscopie bronchique
+d. le scanner thoracique
+
+
+ 4 : tous les examens suivants peuvent
+être pratiqués dans l’abcès du poumon sauf
+un :
+a. hémocultures répétées à chaque pic de
+fièvre
+b. échographie thoracique pour guider la
+ponction aspiration
+c. la fibroscopie bronchique
+d. le scanner thoracique
+
+`;
+
+
+
+function submit(){
+  let qc = qField.value;
+  console.log(sdash(qc).split('##') );
+
+}
+
+
+
+
+
+
+function choix(d) {
+
+  return d.toString().replace(/[a-f]\./gi, '&&');
+}
+
+
+
+
+</script>
+
+
+
+
+
+  </body>
+</html>

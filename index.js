@@ -1,50 +1,48 @@
-const fs = require('fs')
-var http = require('http');
+// Modules to control application life and create native browser window
+const {app, BrowserWindow} = require('electron')
+ 
+let mainWindow
 
+function createWindow () {
+  // Create the browser window.
+  mainWindow = new BrowserWindow({width: 800, height: 600})
 
-http.createServer(function (req, res) {
-  fs.readFile('main.txt', 'utf8', function(err, data) {
-    console.log('fetching   ata');
-    var dash = sdash(data) ;
-    var ch = choix(dash);
-    res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-    let table = '<style>table tr td {border:1px solid black;}</style><table>' , question ,questions;
-questions = ch.split('##');
-for (var i = 0; i < questions.length; i++) {
-  question = questions[i].split('&&');
-if (questions[i].length > 5) {
-   table += '<tr><td>'+question[0]+'<br>'+question.length+' </td>';
+  // and load the index.html of the app.
+  mainWindow.loadFile('index.html')
 
-   // for (var i = 1; i < question.length; i++) {
-//  table += '<td>'+question[i]+'</td>';
-// }
-table +=  '</tr>';
+  // Open the DevTools.
+  // mainWindow.webContents.openDevTools()
 
-}
-}
-    res.write(table + '</table>');
-    res.end();
-  });
-}).listen(8080);
-
-
-
-
-
-
-
-
-
-
-
-
-// app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-
-function sdash(d) {
-  return d.toString().replace(/\d+\)/gi, '##');
+  // Emitted when the window is closed.
+  mainWindow.on('closed', function () {
+    // Dereference the window object, usually you would store windows
+    // in an array if your app supports multi windows, this is the time
+    // when you should delete the corresponding element.
+    mainWindow = null
+  })
 }
 
+// This method will be called when Electron has finished
+// initialization and is ready to create browser windows.
+// Some APIs can only be used after this event occurs.
+app.on('ready', createWindow)
 
-function choix(d) {
-  return d.toString().replace(/[a-f]\./gi, '&&');
-}
+// Quit when all windows are closed.
+app.on('window-all-closed', function () {
+  // On OS X it is common for applications and their menu bar
+  // to stay active until the user quits explicitly with Cmd + Q
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
+
+app.on('activate', function () {
+  // On OS X it's common to re-create a window in the app when the
+  // dock icon is clicked and there are no other windows open.
+  if (mainWindow === null) {
+    createWindow()
+  }
+})
+
+// In this file you can include the rest of your app's specific main process
+// code. You can also put them in separate files and require them here.
