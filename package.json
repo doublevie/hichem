@@ -1,15 +1,22 @@
 {
-  "name": "hichem",
+  "name": "Regex",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1" ,
-    "magic": "electron ." 
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "magic": "electron .",
+    "installer": "node installer.js",
+    "packager": "electron-packager . regex-app --overwrite --asar --platform=win32  --arch=ia32   --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"_Regex app\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^3.0.2"
+    "electron": "^3.0.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "electron-winstaller": "^2.7.0"
   }
 }

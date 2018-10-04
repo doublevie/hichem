@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="css/spectre.min.css">
 <link rel="stylesheet" href="css/spectre-exp.min.css">
 <style media="screen">
-  .card {margin-top: 3vh;height:94vh;}
+  .card {margin-top: 3vh;height:92vh;}
 </style>
     <title></title>
   </head>
   <body>
 
-    <div class="container">
+    <div class="container  ">
       <div class="columns">
         <div class="column col-6">
 
-          <div class="card">
+          <div class="card bg-gray">
 
             <div class="card-header">
               <div class="card-title h5">QUESTIONS</div>
@@ -28,16 +28,21 @@
 
               <div class="form-group">
                 <label class="form-label" for="qfield">Questions</label>
-                <textarea class="form-input" id="qfield" placeholder="COLLER" rows="6"></textarea>
+                <textarea class="form-input" id="qfield" autofocus placeholder="COLLER" rows="7"></textarea>
+                <button type="button" onclick="pastText('qfield')" class="btn btn-sm btn-primary" name="button">Coller</button>
+                <button type="button" onclick="clearField('qfield')" class="btn btn-sm btn-error" name="button">Vider</button>
               </div>
               <div class="form-group">
                 <label class="form-label" for="reponsefield">Reponces</label>
-                <textarea class="form-input" id="reponsefield" placeholder="COLLER" rows="6"></textarea>
+                <textarea class="form-input" id="reponsefield" placeholder="COLLER" rows="7"></textarea>
+                <button type="button" onclick="pastText('reponsefield')" class="btn btn-sm btn-primary" name="button">Coller</button>
+                <button type="button" onclick="clearField('reponsefield')" class="btn btn-sm btn-error" name="button">Vider</button>
               </div>
 
 
             </div>
             <div class="card-footer">
+              <div class="totl loading" ></div>
 
             </div>
           </div>
@@ -53,8 +58,6 @@
 
             </div>
             <div class="card-body">
-
-
               <div class="form-group">
                 <label class="form-label" for="module">Module</label>
                 <input class="form-input" type="text" id="module" placeholder="Module">
@@ -113,6 +116,7 @@
                 </select>
               </div>
 
+              <br><br>
 <div id="resAlert">
 
 
@@ -120,7 +124,7 @@
 
             </div>
             <div class="card-footer">
-              <button class="btn btn-success" onclick="submit()">Ajouter</button>
+              <button class="btn btn-primary btn-block" onclick="submit()">Ajouter</button>
 
             </div>
           </div>
@@ -137,6 +141,8 @@
 
 
 <script type="text/javascript">
+var mysql      = require('mysql');
+
 
 const qField = document.getElementById('qfield') ,
  reponseField = document.getElementById('reponsefield') ,
@@ -158,23 +164,7 @@ regQUestions = [
   /[Q]+[0-9*]+(\s?)+(\)?)+(\:- )/gi,
   /[Question]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,
   /[QCM]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,
-/*
-  /[0-9]+\-/gi ,
-  /[0-9]+\./gi,
-  /[0-9]+\s+\:/gi,
-  /[0-9]+\)+\s/gi,
-  /[0-9]+\//gi,
-  /[0-9]+\//gi,
-  /[0-9]+\//gi,
-  /[0-9*]+\)/gi,
-  /[Q]+[0-9*]/gi,
-  /[0-9*]+\s+\:/gi,
 
-  /[0-9*]+\//gi,
-  /[0-9*]+\-+\s+\-/gi,
-  /[Q]+[0-9*]+\:/gi,
-  /[Q]+[0-9*]+\-/gi,
-  /[Question]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,*/
 
 ];
 
@@ -207,22 +197,44 @@ if (responces.length !== fs.length) {
   resAlert.innerHTML = `<div class="toast toast-error"> Erreur  : Questions ${fs.length}  / reponces ${responces.length}</div>`;
   return;
 }
+
+if (responces.length < 5) {
+  resAlert.innerHTML = `<div class="toast toast-error"> Erreur  : Nombre des Questions ${fs.length}  </div>`;
+  return;
+}
+
+let moddd =  document.querySelector('#module').value,
+annee = document.getElementById('aneeAnnee').value;
+
+if (moddd.length <= 2) {
+  resAlert.innerHTML = `<div class="toast toast-error"> Module obligatoir  </div>`;
+  return;
+}
+
+
+
 resAlert.innerHTML = '<span class="label label-rounded label-success">nombre des Questions '+fs.length+'</span>';
 
 
-
+let data = [];
 for (var i = 0; i < fs.length; i++) {
 let qsss =   secondSplit(fs[i]) ,
 qq = qsss[0] ;
 qsss.shift();
 choices = qsss;
-
-console.log('question '+ qq);
-console.log('responces '+ choices.join('*'));
-console.log('truth '+ responces[i]);
-
+data.push("('"+annee+"','"+moddd+"','"+qq.replace(/'/g, "\\'")+"','"+choices.join(';;').replace(/'/g, "\\'")+"','"+responces[i]+"','','')");
+// insert('','TEST',qq,choices.join(';;'),responces[i])
 }
 
+initConnexion();
+insert2(data.join(','),function(done){
+  if(done) {
+    alert(responces.length +'QMS a été ajouté');
+    window.location.reload()
+  }  else  {
+    resAlert.innerHTML = `<div class="toast toast-error"> Erreur de connexion</div>`;
+  }
+})
 }
 
 
@@ -264,7 +276,7 @@ function choix(d) {
 function  splitResponces(){
   let rr = reponsefield.value.trim().split('\n'), responses =[];
   for (var i = 0; i < rr.length; i++) {
-    if(rr[i].length > 0) responses.push(rr[i].replace('A',0).replace('B',1).replace('C',2).replace('D',3));
+    if(rr[i].length > 0) responses.push(rr[i].replace('A',0).replace('B',1).replace('C',2).replace('D',3).replace('E',4).split('').join('.'));
   }
 return responses;
 }
@@ -272,51 +284,86 @@ return responses;
 
 
 
-qField.value = `
-Q1:	tous les examens suivants peuvent être pratiqués dans l’abcès du poumon sauf un :
-a.	hémocultures répétées à chaque pic de fièvre
-b.	échographie thoracique pour guider la ponction aspiration
-c.	la fibroscopie bronchique
-d.	le scanner thoracique
-Q 2:	une des caractéristiques clinique suivantes fait penser à la DDB :
-a.	bronchorrhée purulent surtout hivernale
-b.	dyspnée d’effort
-c.	infections parenchymateuses récidivantes de même siège
-d.	syndrome pleurétique la compliquant ou la révélant
-Q3:	le traitement de DDB est :
-a.	médical seulement
-b.	médico-chirurgical d'emblée
-c.	chirurgical si la DDB est localisée
-d.	chirurgical si l’hémoptysie dans la DDB est récidivante après embolisation
-Q4:	parmi les propositions propositions suivantes une ne fait pas parti du syndrome de DEMON- MEIGS laquelle.
-a.	Pleurésie avec taux de protéine pleurales est Sup >30 g/1
-b.	Ascite
-c.	Tumeur ovarienne
-d.	Douleurs pelviennes
-Q5:	dans la P.S.F Tuberculeuse la bascilloscopie est :
-a.	positive en général dans l’expectoration
-b.	nécessaire à rechercher dans les urines et le LCR.
-c.	dans le liquide pleurai rarement positive au ZIEHL-NELSON
-d.	généralement positive dans le liquide pleural à l’examen direct
-Q6:	parmi les propositions suivantes des syndromes paranéoplasique, une a une origine neurologique autoimmune, laquelle :
-a.	syndrome de Schawrtz-Barter
-b.	pseudo-myasthénie ou syndrome de LAMBERT- EATON
-c.	Acanthosis nigricans cutané
-d.	Gynécomastie
 
 
 
-`;
-reponsefield.value = `
-A
-A
-A
-A
-A
-A
+
+function pastText(id){
+  setTimeout(function(){
+    document.getElementById(id).value = "";
+    document.getElementById(id).focus()
+    document.execCommand("paste")
+
+  },100)
+}
+
+function clearField(id){
+  document.getElementById(id).value = "";
+  document.getElementById(id).focus();
+
+}
 
 
-`;
+
+
+
+var dbi = {
+  host     : 'frequency-dz.com',
+  user     : 'emmysql',
+  password : 'emmysql',
+  database : 'hichem'
+}
+
+var connection
+function testConnect(){
+   connection = mysql.createConnection(dbi);
+  connection.connect();
+  connection.query('SELECT COUNT(id) AS CID from qcm', function (error, results, fields) {
+    document.querySelector('.totl').classList.remove('loading');
+    if (error) {
+      document.querySelector('.totl').innerHTML = '<div class=" toast toast-error">Erreur de connexion ('+error.code+')</div>';
+
+    }
+    console.log('The solution is: ', results[0]);
+     document.querySelector('.totl').innerHTML = '<div class="toast toast-success">connecté :Total '+results[0].CID+' questions </div>';
+  });
+
+  connection.end();
+}
+
+
+testConnect();
+
+function initConnexion(){
+   connection = mysql.createConnection(dbi);
+  connection.connect();
+}
+
+function insert(ann,mod,quest,choix,rep,callback){
+
+  var sql = "INSERT INTO qcm (annee, module,question,choix,correction,commentaire,interna) VALUES ('"+ann+"','"+mod+"','"+quest.replace(/'/g, "\\'")+"','"+choix.replace(/'/g, "\\'")+"','"+rep+"','','')";
+
+  var query = connection.query(sql, function (error, results) {
+  callback(error == false)
+
+});
+}
+
+
+function insert2(data,callback){
+
+  var sql = "INSERT INTO qcm (annee, module,question,choix,correction,commentaire,interna) VALUES"+data;
+
+  var query = connection.query(sql, function (error, results) {
+  callback(error == null)
+
+});
+}
+
+
+
+
+
 
 </script>
 
