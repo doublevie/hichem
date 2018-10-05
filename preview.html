@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/spectre.min.css">
+
+    <meta charset="utf-8">
+    <title>Prev</title>
+  </head>
+  <body>
+
+    <a class="btn closebtn" onclick="window.close()"> </a>
+
+
+<div class="container">
+
+</div>
+
+
+
+  </body>
+
+  <script type="text/javascript">
+  const fs = require('fs');
+
+  fs.readFile("main.txt", 'utf8', function(err, data ) {
+     console.log( data );
+     document.querySelector('.container').innerHTML = data;
+     document.querySelector('.closebtn').innerText = (document.querySelectorAll('tr').length  - 1)+' Questios';
+  });
+  </script>
+
+</html>

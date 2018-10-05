@@ -51,7 +51,7 @@
         </div>
         <div class="column col-6">
 
-          <div class="card">
+          <div class="card bg-gray">
 
             <div class="card-header">
               <div class="card-title h5">PARAMETRES</div>
@@ -66,6 +66,13 @@
               <div class="form-group">
                 <label class="form-label" for="aneeAnnee">Annee</label>
    <select class="form-select " id="aneeAnnee">
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
 <option value="2007">2007</option>
 <option value="2008">2008</option>
 <option value="2009">2009</option>
@@ -77,8 +84,21 @@
 <option value="2015">2015</option>
 <option value="2016">2016</option>
 <option value="2017">2017</option>
-<option value="2018">2018</option>
+<option value="2018" selected>2018</option>
 
+
+     </select>
+              </div>
+
+
+
+              <div class="form-group">
+                <label class="form-label" for="rotation">Annee</label>
+   <select class="form-select " id="rotation">
+<option value="R1">R1</option>
+<option value="R2">R2</option>
+<option value="R3">R3</option>
+<option value="R4">R4</option>
 
      </select>
               </div>
@@ -88,19 +108,15 @@
                 <label class="form-label" for="qType">Questions</label>
                 <select class="form-select " id="qType">
 
-                  <option value="1">1 -(ou) 1-/</option>
-                  <option value="2">1 )(ou) 1)/</option>
-                  <option value="3">1 :(ou) 1:/</option>
-                  <option value="4">Q1  </option>
+                  <option value="1">1 -</option>
+                  <option value="2">1 )</option>
+                  <option value="3">1 :</option>
+                  <option value="4">Q1 </option>
                   <option value="5">Q1 : </option>
-                  <option value="5">Q1 - </option>
-                  <option value="5">Q1 ) </option>
-
-
-
-
-                  <option value="3">Question1  (ou) Question 1: (ou) </option>
-                  <option value="4">QCM 1 (ou) QCM 1 :</option>
+                  <option value="6">Q1 - </option>
+                  <option value="7">Q1 ) </option>
+                  <option value="8">Question1  (ou) Question 1: (ou) </option>
+                  <option value="9">QCM 1 (ou) QCM 1 :</option>
                 </select>
               </div>
 
@@ -124,7 +140,8 @@
 
             </div>
             <div class="card-footer">
-              <button class="btn btn-primary btn-block" onclick="submit()">Ajouter</button>
+              <button class="btn btn-default " onclick="preview()">voir</button>
+              <button class="btn btn-primary " onclick="submit()">Ajouter</button>
 
             </div>
           </div>
@@ -141,8 +158,11 @@
 
 
 <script type="text/javascript">
-var mysql      = require('mysql');
-
+const mysql      = require('mysql'),
+fs = require('fs') ,
+ {BrowserWindow} = require('electron').remote ,
+ path=require('path') ,
+ url=require('url');
 
 const qField = document.getElementById('qfield') ,
  reponseField = document.getElementById('reponsefield') ,
@@ -158,12 +178,12 @@ regQUestions = [
   /[Q]+(\s?)+[0-9*]+(\s?)+\:/gi,
   /[Q]+[0-9*]+(\s?)+\-/gi,
   /[Q]+[0-9*]+(\s?)+\)/gi,
+  /[Question]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,
+  /[QCM]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,
 
 
   /[0-9*]+(\)?)+(\s?)+(\.?)+(\-?)+(\:?)+(\/?)+(\s?)/gi,
   /[Q]+[0-9*]+(\s?)+(\)?)+(\:- )/gi,
-  /[Question]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,
-  /[QCM]+(\s?)+[0-9*]+(\s?)+(\:?)/gi,
 
 
 ];
@@ -186,43 +206,91 @@ console.log(regQUestions[pos]);
 }
 
 
+function preview(){
+  let fspp = firstSplit(qField.value) ,
+ resData = [] , qsssp ,qqp;
+for (var i = 0; i < fspp.length; i++) {
+   qsssp =   secondSplit(fspp[i]) ;
+   qqp = qsssp[0] ;
+   qsssp.shift();
+choicesp = qsssp.join('<br>* ');
+resData.push('<tr><td>'+(i +1) + ' '+qqp+'</td><td>*'+choicesp+'</td></tr>');
+}
 
 
+
+fs.writeFile("main.txt", '<table class="table table-striped"><tr><th style="width:40%">Question</th><th>choix</th></tr>'+resData.join('')+'</table>', function(err) {
+    if(err) {
+        return console.log(err);
+    }
+
+
+
+    let win = new BrowserWindow({ width: 1000, height: 800,modal: true,frame:true  });
+       win.on('close', function () { win = null ;})
+       win.loadURL(url.format({
+            pathname:path.join(__dirname,'preview.html'),
+            protocol:'file',
+            slashes:true
+    }))
+    win.setMenu(null)
+       win.show();
+
+
+
+
+
+
+
+
+ });
+
+
+
+}
 
 function submit(){
-  let fs = firstSplit(qField.value) ,
+  let fsp = firstSplit(qField.value) ,
   responces = splitResponces();
 
-if (responces.length !== fs.length) {
-  resAlert.innerHTML = `<div class="toast toast-error"> Erreur  : Questions ${fs.length}  / reponces ${responces.length}</div>`;
+if (responces.length !== fsp.length) {
+  resAlert.innerHTML = `<div class="toast toast-error"> Erreur  : Questions ${fsp.length}  / reponces ${responces.length}</div>`;
   return;
 }
 
 if (responces.length < 5) {
-  resAlert.innerHTML = `<div class="toast toast-error"> Erreur  : Nombre des Questions ${fs.length}  </div>`;
+  resAlert.innerHTML = `<div class="toast toast-error"> Erreur  : Nombre des Questions ${fsp.length}  </div>`;
   return;
 }
 
-let moddd =  document.querySelector('#module').value,
-annee = document.getElementById('aneeAnnee').value;
+let moddd =  document.getElementById('module').value,
+annee = document.getElementById('aneeAnnee').value,
+rota = document.getElementById('rotation').value;
 
-if (moddd.length <= 2) {
+if (moddd.length <= 1) {
   resAlert.innerHTML = `<div class="toast toast-error"> Module obligatoir  </div>`;
   return;
 }
 
 
 
-resAlert.innerHTML = '<span class="label label-rounded label-success">nombre des Questions '+fs.length+'</span>';
+
+
+
+
+
+
+
+resAlert.innerHTML = '<span class="label label-rounded label-success">nombre des Questions '+fsp.length+'</span>';
 
 
 let data = [];
-for (var i = 0; i < fs.length; i++) {
-let qsss =   secondSplit(fs[i]) ,
+for (var i = 0; i < fsp.length; i++) {
+let qsss =   secondSplit(fsp[i]) ,
 qq = qsss[0] ;
 qsss.shift();
 choices = qsss;
-data.push("('"+annee+"','"+moddd+"','"+qq.replace(/'/g, "\\'")+"','"+choices.join(';;').replace(/'/g, "\\'")+"','"+responces[i]+"','','')");
+data.push("('"+annee+"','"+rota+"','"+moddd+"','"+qq.replace(/'/g, "\\'")+"','"+choices.join(';;').replace(/'/g, "\\'")+"','"+responces[i]+"','','')");
 // insert('','TEST',qq,choices.join(';;'),responces[i])
 }
 
@@ -352,7 +420,7 @@ function insert(ann,mod,quest,choix,rep,callback){
 
 function insert2(data,callback){
 
-  var sql = "INSERT INTO qcm (annee, module,question,choix,correction,commentaire,interna) VALUES"+data;
+  var sql = "INSERT INTO qcm (annee,rota, module,question,choix,correction,commentaire,interna) VALUES"+data;
 
   var query = connection.query(sql, function (error, results) {
   callback(error == null)
