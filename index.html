@@ -60,7 +60,61 @@
             <div class="card-body">
               <div class="form-group">
                 <label class="form-label" for="module">Module</label>
-                <input class="form-input" type="text" id="module" placeholder="Module">
+
+                <select class="form-select " id="module">
+                  <option value="">Module</option>
+                  <option value="Anatomie Pathologique">Anatomie Pathologique</option>
+                  <option value="Anatomie1">Anatomie1</option>
+                  <option value="Anatomie2">Anatomie2</option>
+                  <option value="Biochimie1">Biochimie1</option>
+                  <option value="Biochimie2">Biochimie2</option>
+                  <option value="Biophysique1">Biophysique1</option>
+                  <option value="Biophysique2">Biophysique2</option>
+                  <option value="Biostatistique">Biostatistique</option>
+                  <option value="Cardiologie-Vasculaire">Cardiologie-Vasculaire</option>
+                  <option value="Chimie">Chimie</option>
+                  <option value="Cytologie">Cytologie</option>
+                  <option value="Deontologie1">Deontologie1</option>
+                  <option value="Deontologie6">Deontologie6</option>
+                  <option value="Dermatologie">Dermatologie</option>
+                  <option value="Economie de la Sante">Economie de la Sante</option>
+                  <option value="Embryologie">Embryologie</option>
+                  <option value="Embryologie">Embryologie</option>
+                  <option value="Endocrinologie">Endocrinologie</option>
+                  <option value="Epidémiologie">Epidémiologie</option>
+                  <option value="Génétique">Génétique</option>
+                  <option value="Gynécologie-Obstétrique">Gynécologie-Obstétrique</option>
+                  <option value="Hématologie">Hématologie</option>
+                  <option value="Hépato-Gastro-entérologie">Hépato-Gastro-entérologie</option>
+                  <option value="Histologie1">Histologie1</option>
+                  <option value="Histologie2">Histologie2</option>
+                  <option value="Immunologie">Immunologie</option>
+                  <option value="Informatique">Informatique</option>
+                  <option value="Maladies Infectieuses">Maladies Infectieuses</option>
+                  <option value="Médecine de Travail">Médecine de Travail</option>
+                  <option value="Médecine Légale">Médecine Légale</option>
+                  <option value="Microbio-Bactériologie">Microbio-Bactériologie</option>
+                  <option value="Neurologie">Neurologie</option>
+                  <option value="Ophtalmologie">Ophtalmologie</option>
+                  <option value="Orthopédie-Traumato">Orthopédie-Traumato</option>
+                  <option value="Oto-rhino-laryngologie">Oto-rhino-laryngologie</option>
+                  <option value="Parasitologie">Parasitologie</option>
+                  <option value="Pédiatrie">Pédiatrie</option>
+                  <option value="Pharmacologie">Pharmacologie</option>
+                  <option value="Physiologie1">Physiologie1</option>
+                  <option value="Physiopathologie">Physiopathologie</option>
+                  <option value="Pneumo-phtisiologie">Pneumo-phtisiologie</option>
+                  <option value="Ppysiologie2">Ppysiologie2</option>
+                  <option value="Psychiatrie">Psychiatrie</option>
+                  <option value="Radiologie">Radiologie</option>
+                  <option value="Rhumatologie">Rhumatologie</option>
+                  <option value="Sémiologie">Sémiologie</option>
+                  <option value="Thérapeutique">Thérapeutique</option>
+                  <option value="Urgences Médico-chirurgicales">Urgences Médico-chirurgicales</option>
+                  <option value="Uro-Néphrologie">Uro-Néphrologie</option>
+
+                </select>
+
               </div>
 
               <div class="form-group">
@@ -99,6 +153,10 @@
 <option value="R2">R2</option>
 <option value="R3">R3</option>
 <option value="R4">R4</option>
+<option value="EMD1">EMD1</option>
+<option value="EMD2">EMD2</option>
+<option value="EMD3">EMD3</option>
+<option value="RATTRAPAGE">RATTRAPAGE</option>
 
      </select>
               </div>
@@ -111,12 +169,16 @@
                   <option value="1">1 -</option>
                   <option value="2">1 )</option>
                   <option value="3">1 :</option>
-                  <option value="4">Q1 </option>
-                  <option value="5">Q1 : </option>
-                  <option value="6">Q1 - </option>
-                  <option value="7">Q1 ) </option>
-                  <option value="8">Question1  (ou) Question 1: (ou) </option>
-                  <option value="9">QCM 1 (ou) QCM 1 :</option>
+                  <option value="4">1 .</option>
+                  <option value="5">1 / ou /-</option>
+
+
+                  <option value="6">Q1 </option>
+                  <option value="7">Q1 : </option>
+                  <option value="8">Q1 - </option>
+                  <option value="9">Q1 ) </option>
+                  <option value="10">Question1  (ou) Question 1: (ou) </option>
+                  <option value="11">QCM 1 (ou) QCM 1 :</option>
                 </select>
               </div>
 
@@ -174,6 +236,8 @@ regQUestions = [
   /[0-9*]+(\s?)+\-/gi,
   /[0-9*]+(\s?)+\)/gi,
   /[0-9*]+(\s?)+\:/gi,
+  /[0-9*]+(\s?)+\./gi,
+  /[0-9*]+(\s?)+\/+(\s?)+(\-?)/gi,
   /[Q]+[0-9*]+(\s?)/gi,
   /[Q]+(\s?)+[0-9*]+(\s?)+\:/gi,
   /[Q]+[0-9*]+(\s?)+\-/gi,
@@ -190,11 +254,11 @@ regQUestions = [
 
 const regChoices = [
   null ,
-  /[A-G]+\.+(\s?)/gi,
-  /[a-g]+\.+(\s?)/gi,
-  /[A-G]+\-+(\s?)/gi,
-  /[A-G]+\)+(\s?)/gi,
-  /[a-g]+\)+(\s?)/gi,
+  /[A-E]+\.+(\s?)/gi,
+  /[a-e]+\.+(\s?)/gi,
+  /[A-E]+\-+(\s?)/gi,
+  /[A-E]+\)+(\s?)/gi,
+  /[a-e]+\)+(\s?)/gi,
 ]
 
 

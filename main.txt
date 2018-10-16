@@ -1,1 +1,19 @@
-<table class="table table-striped"><tr><th style="width:40%">Question</th><th>choix</th></tr></table>
+<table class="table table-striped"><tr><th style="width:40%">Question</th><th>choix</th></tr><tr><td>1 	tous les examens suivants peuvent être pratiqués dans l’abcès du poumon sauf un :
+</td><td>*hémocultures répétées à chaque pic de fièvre
+<br>* échographie thoracique pour guider la ponction aspiration
+<br>* la fibroscopie bronchique
+<br>* le scanner thoracique
+</td></tr><tr><td>2 	une des caractéristiques clinique suivantes fait penser à la DDB :
+</td><td>*bronchorrhée purulent surtout hivernale
+<br>* dyspnée d’effort
+<br>* infections parenchymateuses récidivantes de même siège
+<br>* syndrome pleurétique la compliquant ou la révélant
+</td></tr><tr><td>3 	le traitement de DDB est :
+</td><td>*médical seulement
+<br>* médico-chirurgical d'emblée
+<br>* chirurgical si la DDB est localisée
+<br>* chirurgical si l’hémoptysie dans la DDB est récidivante après embolisation
+</td></tr><tr><td>4 	parmi les propositions propositions suivantes une ne fait pas parti du syndrome de DEMON- MEIGS laquell</td><td>*<br>* Pleurésie avec taux de protéine pleurales est Sup >30 g/1
+<br>* Ascite
+<br>* Tumeur ovarienne
+<br>* Douleurs pelviennes</td></tr></table>

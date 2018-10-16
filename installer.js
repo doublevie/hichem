@@ -6,6 +6,7 @@ resultPromise = electronInstaller.createWindowsInstaller({
     authors: 'Regex App.',
     exe: 'regex-app.exe',
     description: 'regex application',
+    setupExe : 'regex2-setup.exe'
   });
 
 resultPromise.then(() => console.log("It worked!"), (e) => console.log(`No dice: ${e.message}`));
